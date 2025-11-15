@@ -13,11 +13,11 @@
 
 body[data-theme="dark"] {
     --bg: #26413c;
-    --text: #b9cfcd;
-    --card: #192926;
-    --buttons: #1a4b41;
-    --header: #315952;
-     --h3text: #06272e;
+    --text: #cddbd9;
+    --card: #4d726b;
+    --buttons: #668b84;
+    --header: #598780;
+    --h3text: #b4cbd1;
     
 }
 
@@ -29,7 +29,7 @@ body {
 }
 
 h1{
-    font-size: 20px;
+    font-size: 26px;
     color: var(--text);
 }
 
@@ -50,7 +50,6 @@ h3{
 
 header {
     background: var(--header);
-    color: white;
     padding: 15px;
     display: flex;
     justify-content: space-between;
@@ -62,11 +61,6 @@ nav a {
     margin: 0 10px;
     text-decoration: none;
     font-weight: bold;
-}
-
-#theme-toggle {
-    padding: 5px 10px;
-    cursor: pointer;
 }
 
 main {
@@ -97,6 +91,8 @@ main {
     height: 160px;
     border-radius: 50%;
     object-fit: cover;
+    border-style: solid;
+    border-color: var(--bg);
 }
 
 .botones a {
@@ -104,34 +100,51 @@ main {
     padding: 10px 20px;
     margin: 10px;
     background: var(--buttons);
-    color: white;
+    color: var(--text);
     text-decoration: none;
     border-radius: 5px;
 }
 
 footer {
     margin-top: 40px;
-    padding: 20px;
+    padding: 50px;
     background: var(--header);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.logo-uade {
-    width: 80px;
-    display: block;
-    margin: 0 auto 10px;
+.name-n-mail {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
+}
+
+
+.name-n-mail label {
+    display: flex;
+    flex-direction: column;
 }
 
 form {
-    max-width: 400px;
+    width: 100%;
+    max-width: 100%; 
     margin: auto;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
 input, textarea {
     width: 100%;
     padding: 8px;
+    color: var(--bg);
+
+}
+
+label{
+    color: var(--text);
 }
 
 .error {
@@ -144,5 +157,11 @@ input, textarea {
     .perfil {
         flex-direction: column;
         text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .name-n-mail {
+        grid-template-columns: 1fr;
     }
 }

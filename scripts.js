@@ -1,19 +1,27 @@
 $(document).ready(function () {
 
-const $body = $('body');
-const $toggle = $('#theme-toggle');
+    const $body = $('body');
+    
+    const $lightBtn = $('#light-theme');
+    const $darkBtn = $('#dark-theme');
 
-const savedTheme = localStorage.getItem('theme') || 'light';
-$body.attr('data-theme', savedTheme);
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    $body.attr('data-theme', savedTheme);
 
-$toggle.on('click', function () {
-    const newTheme = $body.attr('data-theme') === 'light' ? 'dark' : 'light';
-    $body.attr('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
+    // claro
+    $lightBtn.on('click', function () {
+        $body.attr('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+    });
 
-});
+    // oscuro
+    $darkBtn.on('click', function () {
+        $body.attr('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+    });
 
-    //  VALIDACIÓN DEL FORMULARIO 
+
+    //  validación
     $("#formContacto").submit(function (e) {
         e.preventDefault();
 
