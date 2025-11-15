@@ -1,0 +1,148 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root{
+    --bg: #a2c9c1;
+    --text: #000000;
+    --card: #538078;
+    --buttons: #3a5a54;
+    --header: #557470;
+    --h3text: #06272e;
+
+}
+
+
+body[data-theme="dark"] {
+    --bg: #26413c;
+    --text: #b9cfcd;
+    --card: #192926;
+    --buttons: #1a4b41;
+    --header: #315952;
+     --h3text: #06272e;
+    
+}
+
+body {
+    background-color: var(--bg);
+    margin: 0;
+    padding: 20px;
+    transition: background .3s, color .3s;
+}
+
+h1{
+    font-size: 20px;
+    color: var(--text);
+}
+
+h2{
+    font-size: 16px;
+    color: var(--text);
+}
+
+h3{
+    font-size: 14px;
+    color: var(--h3text);
+}
+
+.dark {
+    background: #111;
+    color: #eee;
+}
+
+header {
+    background: var(--header);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: var(--text);
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#theme-toggle {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+main {
+    padding: 20px;
+}
+
+.datos {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.data-card{
+    background-color: var(--card);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.perfil {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.foto-perfil {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.botones a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background: var(--buttons);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background: var(--header);
+}
+
+.logo-uade {
+    width: 80px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .perfil {
+        flex-direction: column;
+        text-align: center;
+    }
+}

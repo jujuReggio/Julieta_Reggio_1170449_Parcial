@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Personal - Contacto</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="scripts.js" defer></script>
+</head>
+<body data-theme="light">
+
+<header>
+    <div>
+        <h1>Ficha Personal</h1>
+        <h3>Perfil de estudiante</h2>
+    </div>
+    <button id="theme-toggle">🌙</button>
+</header>
+
+<main>
+    <section class="perfil">
+        <img src="img/yo.jpeg" alt="Foto personal" class="foto-perfil">
+
+        <div>
+            <h2>Julieta Reggio</h2>
+            <div class="botones">
+                <a href="index.html">HOME</a>
+                <a target="_blank" href="https://jujureggio.github.io/TPO_ChocolateriaNahue_Reggio_1170449/">Local Com</a>
+                <a target="_blank" href="https://jujureggio.github.io/FanPage_CSS-Reggio/">Fan Page</a>
+                <a href="contacto.html">CONTACTO</a>
+            </div>
+        </div>
+    </section>
+
+    <form id="formContacto">
+        <div class="name-n-mail">
+            <label>Nombre Completo:
+                <input type="text" id="nombre">
+                <small class="error"></small>
+            </label>
+    
+            <label>Email:
+                <input type="email" id="email">
+                <small class="error"></small>
+            </label>
+        </div>
+
+        <label>Mensaje:
+            <textarea id="mensaje"></textarea>
+            <small class="error"></small>
+        </label>
+
+        <div class="botones-form">
+            <button type="reset" id="limpiarBtn">Limpiar</button>
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+
+</main>
+
+<footer>
+    <p>Todos los derechos reservados © 2025</p>
+    <a target="_blank" href="https://github.com/usuario/repositorio" class="btn-repo">Repositorio</a>
+</footer>
+<script src="scripts.js"></script>
+
+</body>
+</html>
